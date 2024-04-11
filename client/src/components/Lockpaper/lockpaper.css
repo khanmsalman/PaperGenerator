@@ -1,0 +1,95 @@
+.btn-lock1 {
+  position: absolute;
+  top: calc(50% - 32px);
+  left: calc(50% - 32px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff00;
+  width: 54px;
+  height: 54px;
+  box-sizing: border-box;
+  padding: 0 0 0 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn-lock1 svg {
+  fill: none;
+  transform: translate3d(0, 0, 0);
+}
+
+.btn-lock1 svg .bling1 {
+  stroke: #ffffff;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-dasharray: 3;
+  stroke-dashoffset: 15;
+  transition: all 0.3s ease;
+}
+
+.btn-lock1 svg .lock1 {
+  stroke: #2dff2d;
+  stroke-width: 4;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  stroke-dasharray: 36;
+  transition: all 0.4s ease;
+}
+
+.btn-lock1 svg .lockb1 {
+  fill: #2dff2d;
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  transform: rotate(8deg);
+  transform-origin: 14px 20px;
+  transition: all 0.2s ease;
+}
+
+.inpLock1 {
+  display: none!important;
+}
+
+.inpLock1:checked + label {
+  background: #ffffff00;
+}
+
+.inpLock1:checked + label svg {
+  opacity: 1;
+}
+
+.inpLock1:checked + label svg .bling1 {
+  animation: bling6132 0.3s linear forwards;
+  animation-delay: 0.2s;
+}
+
+.inpLock1:checked + label svg .lock1 {
+  stroke:red; 
+  stroke-dasharray: 48;
+  animation: locked 0.3s linear forwards;
+}
+
+.inpLock1:checked + label svg .lockb1 {
+  fill:red;
+  transform: rotate(0);
+  transform-origin: 14px 22px;
+}
+
+@keyframes bling6132 {
+  50% {
+    stroke-dasharray: 3;
+    stroke-dashoffset: 12;
+  }
+
+  100% {
+    stroke-dasharray: 3;
+    stroke-dashoffset: 9;
+  }
+}
+
+@keyframes locked {
+  50% {
+    transform: translateY(1px);
+  }
+}

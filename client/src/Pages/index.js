@@ -1,0 +1,8 @@
+export {default as Home} from './Home/Home'
+export {FeedData} from './FeedData/FeedData'
+export {default as GeneratePaper} from './GeneratePaper'
+export {default as AddPaper } from './AddPaper'
+export {default as AddProgram} from './AddProgram'
+export {default as AddSemester} from './AddSemester'
+export {default as FullPaper} from './FullPaper'
+export {default as AllPapers} from './AllPapers'

@@ -1,0 +1,438 @@
+.mynavbar {
+  position: sticky;
+  height: 70px;
+  width: 100%;
+  padding: 0px 3rem;
+  box-shadow: 0px 3px 12px #b9b9b9b5;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 30;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  box-shadow: none !important;
+}
+
+.link-wrapper {
+  height: 100%;
+  width:80%;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:1.5rem;
+}
+.link-wrapper svg {
+  font-size: 1.4rem;
+}
+.mynavbar .genLogo {
+  font-size: 27px;
+  font-weight: 600;
+  color: white;
+  text-shadow: 2px 3px 15px #9408f2;
+  font-family: cursive;
+  align-self: center;
+}
+
+.mynavbar a {
+  text-decoration: none;
+  /* padding: 5px 15px; */
+  font-family: "MuseoModerno", "Poppins", sans-serif;
+  font-size: 14px;
+}
+
+.toolbar .register {
+  margin-left: auto;
+  min-width: 22%;
+  height: 100%;
+  border-radius: 10px;
+  padding-right: 0px;
+  display: flex;
+  gap:10px;
+  justify-content: space-between;
+  align-items: center;
+}
+.register .res-mode {
+  display: none;
+  color: black;
+}
+
+.toolbar button {
+  border: none;
+  font-family: "MuseoModerno", sans-serif;
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+
+.toolbar button:hover {
+  border: none;
+}
+.logout-btn {
+  border-radius: 7px;
+  padding: 7px;
+  background: none;
+  font-size: 18px;
+  box-shadow: 5px 5px 20px #ffcbf489;
+}
+
+.toolbar p {
+  border-bottom: 3px solid #00000000;
+  padding: 3px 17px;
+  padding-top: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s linear;
+  color: #fff;
+  border-radius: 5px;
+}
+.toolbar p:hover{
+  background-color: #eabffaa1;
+  color: #6910A8;
+}
+.register .login,
+a.signup {
+  border-radius: 10px;
+  padding: 9px 15px !important;
+  color: #fff;
+  width: 50%;
+  text-align: center;
+  font-size: 18px;
+}
+.active-light {
+  background: #7c01ce !important;
+  color: #fff !important;
+}
+.active-dark {
+  background: #b13bff !important;
+  color: #fff !important;
+}
+
+.link-wrapper p {
+  position: relative;
+  font-size: 18px;
+}
+.register .username p {
+  font-size: 1.3rem;
+}
+
+.toggle-theme {
+  width: 32px !important;
+  height: 26px;
+  padding: 15px 10px;
+  position: relative;
+  transition: all 0.3s linear;
+  border-radius: 8px;
+  box-shadow: 0px 0px 0px 1.5px rgba(164, 164, 164, 0.727);
+}
+.toggle-theme:hover {
+  background: #caa4c698;
+}
+/* ############ Hamberger Lines Styling ############### */
+#checkbox,
+.toggle {
+  display: none;
+}
+
+/* ############################## Media Queries ########################################## */
+
+@media (max-width: 1240px) {
+  .mynavbar{
+    padding:0 1rem;
+  }
+
+}
+
+@media (max-width: 1025px) {
+  .mynavbar {
+    position: relative;
+    display: block;
+  }
+  .toolbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    width: 30%;
+    position: absolute;
+    transform: translateX(-100%);
+    transition: all 0.5s linear;
+    height: auto;
+    min-height: 85vh;
+    top: 70px;
+    left: 0;
+  }
+  .link-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    width: 90%;
+    height: auto;
+    margin-left: 0 !important;
+    max-height: 44vh;
+  }
+  .link-wrapper a {
+    padding: 0;
+    width: 90%;
+  }
+  .link-wrapper p {
+    width: 80%;
+    margin: 0;
+  }
+  .link-wrapper p:hover {
+    background: #ffbcffa9;
+    padding: 5px 6px 0px 4px !important;
+    border-radius: 5px !important;
+  }
+  .link-wrapper svg {
+    margin-right: 5px;
+    font-size: 1.4rem;
+  }
+
+  .mynavbar .toolbar .register {
+    width: 100% !important;
+    margin-left: 0;
+    padding-top: 20px;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 15px;
+    border-top: 1px solid #a991a095;
+  }
+
+  .register .res-mode {
+    display: block;
+  }
+  .register div:nth-child(1) {
+    width: 100%;
+    display: flex;
+  }
+  .register div:nth-child(1) .res-mode {
+    padding-left: 1rem;
+    font-size: 1.2rem;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  .register .login {
+    margin-top: 10px;
+  }
+  .register .username {
+    width: 100%;
+  }
+  .register .username p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+  .mynavbar .genLogo {
+    width: 85%;
+    text-align: center;
+    float: right;
+  }
+  .link::after {
+    display: none;
+  }
+  /* ```````` Hamberger Menu styling ````````` */
+  #checkbox {
+    display: none;
+  }
+
+  .toggle {
+    position: relative;
+    width: 40px;
+    float: left;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition-duration: 0.5s;
+    margin-top: 15px;
+  }
+
+  .bars {
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(
+      45deg,
+      rgb(183, 0, 255) 20%,
+      rgb(255, 0, 170) 100%
+    );
+    border-radius: 4px;
+  }
+
+  #bar2 {
+    transition-duration: 0.8s;
+  }
+
+  #bar1,
+  #bar3 {
+    width: 70%;
+  }
+
+  #checkbox:checked + .toggle .bars {
+    position: absolute;
+    transition-duration: 0.5s;
+  }
+
+  #checkbox:checked + .toggle #bar2 {
+    transform: scaleX(0);
+    transition-duration: 0.5s;
+  }
+
+  #checkbox:checked + .toggle #bar1 {
+    width: 100%;
+    transform: rotate(45deg);
+    transition-duration: 0.5s;
+  }
+
+  #checkbox:checked + .toggle #bar3 {
+    width: 100%;
+    transform: rotate(-45deg);
+    transition-duration: 0.5s;
+  }
+
+  #checkbox:checked + .toggle {
+    transition-duration: 0.5s;
+    transform: rotate(180deg);
+  }
+
+  #checkbox:checked ~ .toolbar {
+    transform: translateX(0%);
+  }
+}
+
+@media (max-width: 768px) {
+  .toolbar {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    width: 40%;
+    position: absolute;
+    transform: translateX(-100%);
+    transition: all 0.5s linear;
+    height: auto;
+    min-height: 80vh;
+    top: 70px;
+    left: 0;
+  }
+  .link-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1rem;
+    width: 90%;
+    height: auto;
+  }
+  .link-wrapper a {
+    /* font-size: 1.3rem; */
+  }
+  .link-wrapper svg {
+    font-size: 1.6rem;
+  }
+  .register div:nth-child(1) .res-mode {
+    font-size: 1.4rem;
+  }
+
+  .register .username p {
+    font-size: 1.5rem !important;
+  }
+  /*############  Hamberger lines styling #############*/
+  #checkbox {
+    display: none;
+  }
+
+  .toggle {
+    position: relative;
+    width: 40px;
+    float: left;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition-duration: 0.5s;
+    margin-top: 15px;
+  }
+
+  .bars {
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(
+      45deg,
+      rgb(183, 0, 255) 20%,
+      rgb(255, 0, 170) 100%
+    );
+    border-radius: 4px;
+  }
+
+  #bar2 {
+    transition-duration: 0.8s;
+  }
+
+  #bar1,
+  #bar3 {
+    width: 70%;
+  }
+
+  #checkbox:checked + .toggle .bars {
+    position: absolute;
+    transition-duration: 0.5s;
+  }
+
+  #checkbox:checked + .toggle #bar2 {
+    transform: scaleX(0);
+    transition-duration: 0.5s;
+  }
+
+  #checkbox:checked + .toggle #bar1 {
+    width: 100%;
+    transform: rotate(45deg);
+    transition-duration: 0.5s;
+  }
+
+  #checkbox:checked + .toggle #bar3 {
+    width: 100%;
+    transform: rotate(-45deg);
+    transition-duration: 0.5s;
+  }
+
+  #checkbox:checked + .toggle {
+    transition-duration: 0.5s;
+    transform: rotate(180deg);
+  }
+
+  #checkbox:checked ~ .toolbar {
+    transform: translateX(0%);
+  }
+}
+
+@media (max-width: 550px) {
+  .toolbar {
+    width: 50%;
+  }
+}
+
+@media (max-width: 420px) {
+  .toolbar {
+    width: 60%;
+  }
+}
+@media (max-width: 300px) {
+  .toolbar {
+    width: 100%;
+  }
+}
